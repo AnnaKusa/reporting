@@ -1,0 +1,70 @@
+body {
+    background-image: url("background1.jpg");
+}
+
+p {
+    font-size: 25px;
+}
+
+div {
+	width: 110px;
+    height: 70px;
+	background: #BDB8C4;
+	float: left;
+	width: 108px;
+    height: 67px;
+	border: solid 1px;
+	border-color:#343449;
+}
+
+#mainFrame {
+   width: 770px;
+   height: 553px;
+   position: relative;
+   margin: 0px auto;
+   top: 40px;
+   float: inherit;
+	border: solid 2px;
+}
+
+#header {
+   width: 768px;
+   height: 68px;
+   position: relative;
+   background: #E9E4F2;
+   float: inherit;
+   border: solid 1px;
+}
+
+#img-left {
+	width: 70px;
+	height: 70px;
+	position: relative;
+	float: left;
+}
+
+#img-right {
+	width: 70px;
+	height: 70px;
+	position: relative;
+	float: left;
+}
+
+#mounth {
+	border: none;
+	width: 628px;
+	height: 68px;
+	float:left;
+	background: #E9E4F2;
+	text-align: center;
+}
+#days {
+	background: #CAA0D8;
+	text-align: center;
+  vertical-align: middle;
+}
+#datas {
+border: none;
+   width: 770px;
+   height: 413px;
+}
