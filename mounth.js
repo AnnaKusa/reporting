@@ -15,8 +15,8 @@ function clickLeft() {
 }
 
 function clickRight() {
-    if(month===11) {
-        month=0;
+    if (month === 11) {
+        month = 0;
         year++;
     } else {
         month++;
@@ -31,6 +31,7 @@ function setMounth() {
 }
 
 function createDatas() {
+    // var
     for(var i=0; i<42; i++) {
         var container = document.createElement('div');
         container.id = i;
@@ -46,13 +47,12 @@ function setDatas() {
     var daysOfMonth = new Date(year, month+1, 0).getDate();
     for (var i = 0; i < firstDay; i++) {
         nullDays(i);
-
     }
     for (var i = 0 ; i < daysOfMonth; i++) {
         document.getElementById(i + firstDay).innerHTML = '<p>' + (i + 1) + '</p>';
-        document.getElementById(i + firstDay).className = 'my_div';
-        document.getElementById(i + firstDay).setAttribute('onmouseover', "Change_Class(document.getElementById("+(i + firstDay)+"), 'Over_Bg')");
-        document.getElementById(i + firstDay).setAttribute('onmouseout', "Change_Class(document.getElementById("+(i + firstDay)+"), 'Out_Bg')") ;
+        document.getElementById(i + firstDay).className = 'Out_Bg';
+        document.getElementById(i + firstDay).setAttribute('onmouseover', "Change_Class(document.getElementById(" + ( i + firstDay ) + "), 'Over_Bg')");
+        document.getElementById(i + firstDay).setAttribute('onmouseout', "Change_Class(document.getElementById(" + ( i + firstDay ) + "), 'Out_Bg')") ;
     }
     for (var i = daysOfMonth+firstDay; i < 42; i++) {
         nullDays(i);
@@ -79,3 +79,21 @@ window.onload = function() {
     setDatas();
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//без глобальних змінних, чудо імен, кодконвеншн
