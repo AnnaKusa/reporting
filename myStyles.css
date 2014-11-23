@@ -31,7 +31,7 @@ div {
     width: 768px;
     height: 68px;
     position: relative;
-    background:#B7AFCA;
+    background: #DAD7DE;
     float: inherit;
     border: solid 1px;
 }
@@ -71,7 +71,7 @@ div {
 }
 
 .Over_Bg {
-    background:#EFE6EA ;
+    background:#A88AB2 ;
 }
 
 .Out_Bg {
@@ -79,5 +79,5 @@ div {
 }
 
 .not_active {
-    background: #D8C8D0;
+    background: #EFE6EA;
 }

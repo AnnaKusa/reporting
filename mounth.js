@@ -1,17 +1,18 @@
 var today = new Date();
-var day = today.getDate();
-var month = today.getMonth(); //January is 0!
+var month = today.getMonth();
 var year = today.getFullYear();
+var DAYS_OF_WEEK = 7;
+var DAYS_ROWS = 6;
 
 function clickLeft() {
-    if(month===0) {
+    if(month === 0) {
         month=11;
         year--;
     } else {
         month--;
     }
     setMounth();
-    setDatas();
+    setDays();
 }
 
 function clickRight() {
@@ -22,7 +23,7 @@ function clickRight() {
         month++;
     }
     setMounth();
-    setDatas();
+    setDays();
 }
 
 function setMounth() {
@@ -30,19 +31,18 @@ function setMounth() {
     document.getElementById('mounth').innerHTML = '<p>'+monthNames[month]+', '+ year +'</p>';
 }
 
-function createDatas() {
-    // var
-    for(var i=0; i<42; i++) {
+function createDays() {
+    for (var i = 0; i < DAYS_OF_WEEK * DAYS_ROWS; i++) {
         var container = document.createElement('div');
         container.id = i;
         document.getElementsByClassName('datas')[0].appendChild(container);
     }
 }
 
-function setDatas() {
+function setDays() {
     var firstDay = new Date(year, month, 1).getDay() - 1;
     if (firstDay < 0) {
-        firstDay += 7;
+        firstDay += DAYS_OF_WEEK;
     }
     var daysOfMonth = new Date(year, month+1, 0).getDate();
     for (var i = 0; i < firstDay; i++) {
@@ -54,7 +54,7 @@ function setDatas() {
         document.getElementById(i + firstDay).setAttribute('onmouseover', "Change_Class(document.getElementById(" + ( i + firstDay ) + "), 'Over_Bg')");
         document.getElementById(i + firstDay).setAttribute('onmouseout', "Change_Class(document.getElementById(" + ( i + firstDay ) + "), 'Out_Bg')") ;
     }
-    for (var i = daysOfMonth+firstDay; i < 42; i++) {
+    for (var i = daysOfMonth + firstDay; i < DAYS_OF_WEEK * DAYS_ROWS; i++) {
         nullDays(i);
     }
 }
@@ -71,13 +71,10 @@ function Change_Class(myElement, My_Class) {
     myElement.className = My_Class;
 }
 	
-
 window.onload = function() {
-
     setMounth();
-    createDatas();
-    setDatas();
-
+    createDays();
+    setDays();
 }
 
 
