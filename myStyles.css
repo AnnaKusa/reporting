@@ -6,25 +6,34 @@ p {
     font-size: 25px;
 }
 
+.cell {
+    line-height: 69px;
+    font-size: 25px;
+}
+
 div {
-    width: 110px;
-    height: 70px;
     float: left;
     width: 108px;
     height: 67px;
     border: solid 1px;
     border-color: #343449;
     text-align: center;
+    z-index: 5;
 }
 
-#mainFrame {
+#mainFrame, .report{
     width: 770px;
     height: 553px;
-    position: relative;
-    margin: 0px auto;
-    top: 40px;
-    float: inherit;
+    position: fixed;
     border: solid 2px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: 0px;
+    margin-top:auto;
+    bottom:0;
+    margin-bottom:auto;
 }
 
 #header {
@@ -64,20 +73,78 @@ div {
     vertical-align: middle;
 }
 
-.datas {
+.data {
     border: none;
     width: 770px;
     height: 413px;
 }
-
-.Over_Bg {
-    background:#A88AB2 ;
+.active {
+    background-color: #A88AB2;
 }
-
-.Out_Bg {
-    background: #C4B1BA;
+.active:hover {
+    background-color: #C4B1BA;
 }
-
 .not_active {
     background: #EFE6EA;
+}
+
+.not_active:active {
+}
+
+.report {
+    background: #EFE6EA;
+ /* box-shadow: 0px 0px 800px 130px #AAA1AD;*/
+    position: fixed;
+    min-height: 553px;
+    overflow: auto;
+}
+
+.report h2 {
+    color: #343449;
+    text-align:left;
+    padding-left:5em;
+}
+
+.reportForm {
+    width: 700px;
+    height: 60px;
+    border: solid 2px;
+    background: #9D91B7;
+    float: left;
+    position: relative;
+    left: 25px;
+    margin-bottom: 5px;
+}
+
+.add_form {
+    width: 700px;
+    height: 40px;
+    border: solid 2px;
+    background: #F7FCC1;
+    float: left;
+    position: relative;
+    border-radius: 10px;
+    left: 25px;
+    top: 10px;
+}
+
+.closeImg {
+    right: 5px;
+    top: 5px;
+    position: absolute;
+}
+
+.plus_img {
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+.input_categories{
+    width: 700px;
+    height: 20px;
+    border: none;
+    text-align: left;
 }
