@@ -4,26 +4,32 @@
     <head>
 	    <title>My reporting</title>
 		<meta charset = "utf-8">
-        <link rel="stylesheet" type="text/css" href="myStyles.css" />
-        <script src="jc.js"> </script>
-		<script src = "mounth.js"> </script>
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/redmond/jquery-ui.css" />
+	<!--	<link rel="stylesheet" type="text/css" href="http://www.miamibeachincard.com/theme/default%20-%20original/js/pt/example/css/timecntr/jquery-ui-1.7.1.custom.css" />
+   -->
+     	<link rel="stylesheet" type="text/css" href="timeSelect.css" />
+		<link rel="stylesheet" type="text/css" href="myStyles.css" />
+		<script src="jc.js"> </script>
+		<script type="text/javascript" src="timeSelect.js"></script>
+		<script src = "create%20calendar.js"> </script>
+		<script src="form.js"></script>
     </head>
 	
 	<body>
 		<div id="mainFrame">
 			<div id="header">
-				<img src="arrow-left.png" id="img-left" onclick="clickLeft()">
-				<div id="mounth">
+				<img src="images/arrow-left.png" id="img-left" onclick="clickLeft()">
+				<div id="month">
 				</div>
-				<img src="arrow-right.png" id="img-right" onclick="clickRight()">
+				<img src="images/arrow-right.png" id="img-right" onclick="clickRight()">
 			</div>
-            <div id = "days"><p>su</p></div>
-			<div id = "days"><p>mo</p></div>
-			<div id = "days"><p>tu</p></div>
-			<div id = "days"><p>we</p></div>
-			<div id = "days"><p>th</p></div>
-			<div id = "days"><p>fr</p></div>
-			<div id = "days"><p>st</p></div>
+            <div class = "days"><p>su</p></div>
+			<div class = "days"><p>mo</p></div>
+			<div class = "days"><p>tu</p></div>
+			<div class = "days"><p>we</p></div>
+			<div class = "days"><p>th</p></div>
+			<div class = "days"><p>fr</p></div>
+			<div class = "days"><p>st</p></div>
 			<div class = "data"></div>
 		</div>							
 	</body>
